@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <base href="." />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تحليل صحة الأسنان بالذكاء الاصطناعي - التحليل المباشر</title>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/3.18.0/tf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-layers"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="loading" style="display: none;">جاري تحميل النماذج...</div>
+
+    <div class="container">
+        <h1>نظام تحليل صحة الأسنان - التحليل المباشر</h1>
+        
+        <div id="video-container">
+            <video id="video" width="600" height="400" autoplay muted></video>
+            <canvas id="overlay-canvas"></canvas>
+        </div>
+
+        <button id="start-btn" disabled>بدء التحليل المباشر</button>
+        <button id="stop-btn" disabled>إيقاف التحليل</button>
+        
+        <div id="charts-container">
+            <div class="chart-wrapper">
+                <canvas id="teethHealthChart"></canvas>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="symmetryChart"></canvas>
+            </div>
+        </div>
+
+        <div id="results"></div>
+    </div>
+
+    <div class="realtime-stats" id="realtime-stats"></div>
+
+    <!-- Custom JavaScript -->
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/teethAnalysis.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
