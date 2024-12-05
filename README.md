@@ -62,6 +62,10 @@
 4. انتظر تحميل نماذج الذكاء الاصطناعي
 5. اضغط على زر "بدء التحليل المباشر"
 
+## حقوق الملكية
+
+ 2024 جميع الحقوق محفوظة [Mohamed Yussry](https://mohamedyussry.github.io/mohamedyussry/)
+
 ## الترخيص
 
 MIT License
