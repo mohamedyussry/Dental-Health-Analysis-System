@@ -15,6 +15,8 @@ body {
 #video-container {
     position: relative;
     margin: 20px auto;
+    width: 100%;
+    max-width: 800px;
 }
 
 #overlay-canvas {
@@ -23,6 +25,15 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+#video {
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    height: auto;
 }
 
 button {
@@ -71,13 +82,6 @@ button:disabled {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-#video {
-    margin: 20px auto;
-    border-radius: 10px;
-    max-width: 100%;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
 .realtime-stats {
     position: fixed;
     top: 20px;
@@ -117,4 +121,63 @@ button:disabled {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    #results {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .tooth-detail {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #charts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .realtime-stats {
+        top: 10px;
+        left: 10px;
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #results {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #video {
+        margin: 10px auto;
+    }
+
+    .tooth-detail {
+        font-size: 12px;
+    }
 }
